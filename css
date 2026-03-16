@@ -1,8 +1,12 @@
+html{
+scroll-behavior:smooth;
+}
+
 body{
 font-family: Arial, sans-serif;
 margin:0;
 padding:0;
-background:#0f172a;
+background:linear-gradient(120deg,#0f172a,#020617);
 color:white;
 text-align:center;
 transition:0.3s;
@@ -102,13 +106,20 @@ width:140px;
 border-radius:50%;
 margin-bottom:20px;
 border:3px solid #2563eb;
-box-shadow:0 0 20px rgba(37,99,235,0.6);
+box-shadow:0 0 20px #2563eb;
+transition:0.4s;
+}
+
+.hero img:hover{
+transform:scale(1.1);
+box-shadow:0 0 40px #2563eb;
 }
 
 /* Typing text */
 
 #typing{
 color:#38bdf8;
+font-weight:bold;
 }
 
 /* Skills progress bars */
@@ -162,12 +173,16 @@ padding:20px;
 margin:20px auto;
 border-radius:12px;
 box-shadow:0 10px 20px rgba(0,0,0,0.3);
-transition:0.3s;
+transition:0.4s;
 max-width:400px;
+transform-style:preserve-3d;
 }
 
+/* 3D hover */
+
 .project-card:hover{
-transform:translateY(-5px) scale(1.02);
+transform:rotateY(10deg) rotateX(10deg) scale(1.05);
+box-shadow:0 20px 40px rgba(0,0,0,0.6);
 }
 
 .project-card img{
@@ -193,6 +208,7 @@ transition:0.3s;
 .btn:hover{
 background:#1d4ed8;
 transform:scale(1.05);
+box-shadow:0 0 10px #2563eb;
 }
 
 /* Links */
