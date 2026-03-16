@@ -7,6 +7,17 @@ color:white;
 text-align:center;
 }
 
+/* Particles background */
+
+#particles-js{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
 /* Container */
 
 .container{
@@ -14,6 +25,44 @@ width:90%;
 max-width:900px;
 margin:auto;
 padding:40px;
+}
+
+/* Navbar */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:#020617;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+nav a{
+color:white;
+margin-left:15px;
+text-decoration:none;
+font-size:16px;
+position:relative;
+}
+
+/* Navbar hover animation */
+
+nav a::after{
+content:"";
+position:absolute;
+width:0;
+height:2px;
+background:#38bdf8;
+left:0;
+bottom:-4px;
+transition:0.3s;
+}
+
+nav a:hover::after{
+width:100%;
 }
 
 /* Headings */
@@ -33,6 +82,9 @@ margin-bottom:15px;
 section{
 margin:50px 0;
 }
+
+/* Skills */
+
 ul{
 list-style:none;
 padding:0;
@@ -45,6 +97,24 @@ background:#334155;
 padding:10px 15px;
 margin:5px;
 border-radius:8px;
+}
+
+/* Hero */
+
+.hero{
+padding:80px 20px;
+}
+
+.hero img{
+width:140px;
+border-radius:50%;
+margin-bottom:20px;
+}
+
+/* Typing text */
+
+#typing{
+color:#38bdf8;
 }
 
 /* Project Card */
@@ -60,7 +130,7 @@ max-width:400px;
 }
 
 .project-card:hover{
-transform:translateY(-5px);
+transform:translateY(-5px) scale(1.02);
 }
 
 .project-card img{
@@ -88,21 +158,6 @@ background:#1d4ed8;
 transform:scale(1.05);
 }
 
-/* Skills */
-
-ul{
-list-style:none;
-padding:0;
-}
-
-ul li{
-display:inline-block;
-background:#334155;
-padding:10px 15px;
-margin:5px;
-border-radius:8px;
-}
-
 /* Links */
 
 a{
@@ -114,9 +169,52 @@ a:hover{
 text-decoration:underline;
 }
 
-/* Image responsive */
+/* Contact form */
 
-img{
-max-width:100%;
-height:auto;
+form{
+max-width:400px;
+margin:auto;
+}
+
+input, textarea{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:none;
+border-radius:6px;
+}
+
+/* Footer */
+
+footer{
+background:#020617;
+padding:20px;
+margin-top:40px;
+}
+
+/* Scroll animation */
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:0.6s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* Responsive */
+
+@media(max-width:600px){
+
+h1{
+font-size:28px;
+}
+
+nav{
+flex-direction:column;
+}
+
 }
