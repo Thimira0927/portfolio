@@ -23,6 +23,8 @@ h2{
 margin-top:40px;
 }
 
+/* Project Card */
+
 .project-card{
 background:#1e293b;
 padding:20px;
@@ -39,17 +41,45 @@ transform:translateY(-5px);
 .project-card img{
 width:100%;
 border-radius:10px;
+margin-bottom:15px;
 }
 
-button{
+/* Buttons */
+
+.btn{
+display:inline-block;
 background:#2563eb;
 color:white;
-border:none;
 padding:10px 20px;
 border-radius:6px;
-cursor:pointer;
+margin:5px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
 }
 
-button:hover{
+.btn:hover{
 background:#1d4ed8;
+transform:scale(1.05);
+}
+
+/* Skills */
+
+.skills span{
+display:inline-block;
+background:#334155;
+padding:10px 15px;
+margin:5px;
+border-radius:8px;
+}
+
+/* Links */
+
+a{
+color:#38bdf8;
+text-decoration:none;
+}
+
+a:hover{
+text-decoration:underline;
 }
