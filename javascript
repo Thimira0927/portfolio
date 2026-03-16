@@ -1,4 +1,4 @@
-/* DARK LIGHT MODE */
+/* DARK / LIGHT MODE */
 
 function toggleMode(){
 document.body.classList.toggle("light");
@@ -7,8 +7,8 @@ document.body.classList.toggle("light");
 
 /* TYPING ANIMATION */
 
-const text="Thimira";
-let i=0;
+const text = "Thimira | Frontend Developer";
+let i = 0;
 
 function typing(){
 
@@ -18,13 +18,36 @@ document.getElementById("typing").innerHTML += text.charAt(i);
 
 i++;
 
-setTimeout(typing,150);
+setTimeout(typing,120);
 
 }
 
 }
 
 typing();
+
+
+/* SCROLL ANIMATION */
+
+window.addEventListener("scroll", function(){
+
+const reveals = document.querySelectorAll(".reveal");
+
+for(let i = 0; i < reveals.length; i++){
+
+const windowHeight = window.innerHeight;
+
+const revealTop = reveals[i].getBoundingClientRect().top;
+
+if(revealTop < windowHeight - 100){
+
+reveals[i].classList.add("active");
+
+}
+
+}
+
+});
 
 
 /* PARTICLES BACKGROUND */
@@ -42,15 +65,15 @@ move:{speed:2}
 
 fetch("https://api.github.com/users/Thimira0927/repos")
 
-.then(res=>res.json())
+.then(res => res.json())
 
-.then(data=>{
+.then(data => {
 
-const container=document.getElementById("github-projects");
+const container = document.getElementById("github-projects");
 
-data.slice(0,3).forEach(repo=>{
+data.slice(0,3).forEach(repo => {
 
-container.innerHTML+=`
+container.innerHTML += `
 
 <div class="project-card">
 
