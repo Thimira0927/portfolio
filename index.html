@@ -166,17 +166,19 @@ gap:20px;
 margin-top:30px;
 }
 
-/* PROJECT CARD */
+/* 3D PROJECT CARD */
 
 .project-card{
 background:var(--card);
 padding:20px;
 border-radius:12px;
 transition:0.4s;
+transform-style:preserve-3d;
 }
 
 .project-card:hover{
-transform:translateY(-10px) scale(1.02);
+transform:rotateY(10deg) rotateX(10deg) scale(1.05);
+box-shadow:0 20px 40px rgba(0,0,0,0.5);
 }
 
 .project-card img{
@@ -386,6 +388,16 @@ I enjoy building web applications using HTML, CSS and JavaScript.
 </div>
 
 </div>
+
+</section>
+
+<!-- GITHUB GRAPH -->
+
+<section class="reveal">
+
+<h2>GitHub Activity</h2>
+
+<img src="https://ghchart.rshah.org/Thimira0927" alt="GitHub Contribution Graph">
 
 </section>
 
