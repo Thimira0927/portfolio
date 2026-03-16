@@ -5,6 +5,14 @@ padding:0;
 background:#0f172a;
 color:white;
 text-align:center;
+transition:0.3s;
+}
+
+/* Light Mode */
+
+.light{
+background:#f1f5f9;
+color:#0f172a;
 }
 
 /* Particles background */
@@ -83,22 +91,6 @@ section{
 margin:50px 0;
 }
 
-/* Skills */
-
-ul{
-list-style:none;
-padding:0;
-margin:0;
-}
-
-ul li{
-display:inline-block;
-background:#334155;
-padding:10px 15px;
-margin:5px;
-border-radius:8px;
-}
-
 /* Hero */
 
 .hero{
@@ -109,12 +101,57 @@ padding:80px 20px;
 width:140px;
 border-radius:50%;
 margin-bottom:20px;
+border:3px solid #2563eb;
+box-shadow:0 0 20px rgba(37,99,235,0.6);
 }
 
 /* Typing text */
 
 #typing{
 color:#38bdf8;
+}
+
+/* Skills progress bars */
+
+.skills{
+max-width:500px;
+margin:auto;
+text-align:left;
+}
+
+.skill{
+margin-bottom:20px;
+}
+
+.bar{
+background:#334155;
+height:10px;
+border-radius:10px;
+overflow:hidden;
+}
+
+.progress{
+height:100%;
+background:#2563eb;
+width:0;
+animation:load 2s forwards;
+}
+
+.html{width:90%;}
+.css{width:80%;}
+.js{width:70%;}
+.git{width:75%;}
+
+@keyframes load{
+from{width:0;}
+}
+
+/* Project Grid */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 /* Project Card */
