@@ -124,12 +124,37 @@ text-align:center;
 
 /* SKILLS */
 
-.skills span{
-display:inline-block;
-background:var(--card);
-padding:10px 15px;
-margin:5px;
-border-radius:8px;
+.skills{
+max-width:500px;
+margin:auto;
+}
+
+.skill{
+text-align:left;
+margin-bottom:20px;
+}
+
+.bar{
+background:#334155;
+height:10px;
+border-radius:10px;
+overflow:hidden;
+}
+
+.progress{
+height:100%;
+background:#2563eb;
+width:0;
+animation:load 2s forwards;
+}
+
+.html{width:90%;}
+.css{width:80%;}
+.js{width:70%;}
+.git{width:75%;}
+
+@keyframes load{
+from{width:0;}
 }
 
 /* PROJECT GRID */
@@ -308,11 +333,25 @@ I enjoy building web applications using HTML, CSS and JavaScript.
 
 <div class="skills">
 
-<span>HTML</span>
-<span>CSS</span>
-<span>JavaScript</span>
-<span>Git & GitHub</span>
-<span>Web Development</span>
+<div class="skill">
+<p>HTML</p>
+<div class="bar"><div class="progress html"></div></div>
+</div>
+
+<div class="skill">
+<p>CSS</p>
+<div class="bar"><div class="progress css"></div></div>
+</div>
+
+<div class="skill">
+<p>JavaScript</p>
+<div class="bar"><div class="progress js"></div></div>
+</div>
+
+<div class="skill">
+<p>Git & GitHub</p>
+<div class="bar"><div class="progress git"></div></div>
+</div>
 
 </div>
 
@@ -388,14 +427,14 @@ document.body.classList.toggle("light");
 
 /* TYPING ANIMATION */
 
-const text="Thimira";
+const text="Thimira | Frontend Developer";
 let i=0;
 
 function typing(){
 if(i < text.length){
 document.getElementById("typing").innerHTML += text.charAt(i);
 i++;
-setTimeout(typing,150);
+setTimeout(typing,120);
 }
 }
 typing();
