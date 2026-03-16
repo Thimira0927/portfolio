@@ -3,7 +3,7 @@
 
 <head>
 <title>Thimira Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
 <style>
 
@@ -21,7 +21,8 @@ margin:50px;
 
 a{
 color:cyan;
-font-size:18px;
+font-size:16px;
+text-decoration:none;
 }
 
 .skills span{
@@ -32,10 +33,33 @@ margin:5px;
 border-radius:6px;
 }
 
-.project{
+.project-card{
 background:#1a1a1a;
 padding:20px;
 border-radius:10px;
+width:320px;
+margin:auto;
+box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+
+.project-card img{
+width:100%;
+border-radius:8px;
+margin-bottom:10px;
+}
+
+.btn{
+display:inline-block;
+margin-top:10px;
+margin-right:10px;
+padding:8px 15px;
+background:#00bcd4;
+color:white;
+border-radius:6px;
+}
+
+.btn:hover{
+background:#0097a7;
 }
 
 </style>
@@ -43,8 +67,7 @@ border-radius:10px;
 </head>
 
 <body>
-<img src="weather.png" width="300">
-  
+
 <h1>Hi, I'm Thimira</h1>
 <p>Frontend Developer</p>
 
@@ -72,30 +95,22 @@ I enjoy building web applications using HTML, CSS and JavaScript.
 <section>
 <h2>Projects</h2>
 
-  <div class="project-card">
+<div class="project-card">
 
-<img src="weather.png" width="400">
-
-
-
-
+<img src="weather.png" alt="Weather App Screenshot">
 
 <h3>Weather App</h3>
 
-  <p>A modern weather application built with HTML, CSS and JavaScript using OpenWeather API.</p>
+<p>
+A modern weather application built with HTML, CSS and JavaScript using OpenWeather API.
+</p>
 
-<a href="https://thimira0927.github.io/weather-App/" target="_blank">
-View Live Project
+<a href="https://thimira0927.github.io/weather-App/" target="_blank" class="btn">
+View Live
 </a>
 
-  <a href="https://github.com/Thimira0927/weather-App" target="_blank">
-View Source Code
-</a>
-
-<p>Weather forecast web application.</p>
-
-<a href="https://thimira0927.github.io/weather-App/">
-View Live Project
+<a href="https://github.com/Thimira0927/weather-App" target="_blank" class="btn">
+Source Code
 </a>
 
 </div>
@@ -103,17 +118,15 @@ View Live Project
 </section>
 
 <section>
-<<h2>Contact</h2>
+<h2>Contact</h2>
 
 <p>
-<a href="https://github.com/Thimira0927">GitHub</a>
+<a href="https://github.com/Thimira0927" target="_blank">GitHub</a>
 </p>
 
 <p>
-<a href="https://www.linkedin.com/">LinkedIn</a>
+<a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
 </p>
-
-
 
 </section>
 
